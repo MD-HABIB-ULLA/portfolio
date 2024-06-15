@@ -13,7 +13,7 @@ const Banner = () => {
     document.body.removeChild(link);
   };
   return (
-    <div style={{ height: "calc(100vh - 144px)" }}>
+    <div  >
       <div className="flex items-center h-full">
         <div className="w-full justify-between flex   container m-auto ">
           <div className="flex justify-between flex-col lg:flex-row-reverse">
@@ -32,7 +32,7 @@ const Banner = () => {
             <div className="md:mt-0 mt-5">
               <Fade duration={1000} direction={"up"} triggerOnce={true} cascade={true}>
                 {" "}
-                <h1 className="lg:text-[120px] text-[80px] font-bold  uppercase">
+                <h1 className="lg:text-[120px] text-[70px] font-bold  uppercase">
                   Habib ulla
                 </h1>
                 <h1
@@ -40,7 +40,7 @@ const Banner = () => {
                     margin: "auto 0",
                     fontWeight: "normal",
                   }}
-                  className="lg:text-5xl text-3xl uppercase"
+                  className="lg:text-5xl text-2xl uppercase"
                 >
                   I am a{" "}
                   <span className="bg-gradient-to-r from-[#FE54F5] via-[#CE3AEE] to-[#4C9BE4]     text-transparent  bg-clip-text">
@@ -59,7 +59,7 @@ const Banner = () => {
                     />
                   </span>
                 </h1>
-                <p className="py-6 lg:w-2/3 text-xl ">
+                <p className="py-6 lg:w-2/3 text-base ">
                   Motivated web developer with a strong background in React and
                   JavaScript, eager to contribute to real-world projects in a
                   dynamic team. Passionate about coding and continuous learning,

@@ -3,19 +3,24 @@ import bg from "../src/assets/site-bg.jpg";
 import Navber from "./Components/Nav/Navber";
 import Banner from "./Components/Banner/Banner";
 import About from "./Pages/About/About";
+import Home from "./Pages/Home/Home";
+import Projects from "./Pages/Projects/Projects";
+import Skills from "./Pages/Skills/Skills";
+import Contacts from "./Pages/Contact/Contacts";
 
 function App() {
   return (
     <div
       style={{ backgroundImage: `url(${bg})` }}
-      className="bg-no-repeat bg-cover overflow-hidden"
+      className="bg-no-repeat bg-cover overflow-hidden px-3 lg:p-0"
     >
-      <Header />
+      <Home />
+      <About />
       <Navber />
-      <Banner/>
-      <About/>
-
-      <div className="h-[4000px]"></div>
+      <Skills />
+      <Projects />
+      <Contacts />
+      {/* <div className="h-[4000px]"></div> */}
     </div>
   );
 }

@@ -18,10 +18,9 @@
 
 .active {
   color: #fff;
-  padding: 1rem;
   border-radius: 100%;
 }
 
 .section {
-  @apply py-8 lg:py-24 lg:h-screen flex items-center;
+  @apply py-8 lg:py-24 lg:h-screen flex items-center justify-center;
 }
