@@ -1,10 +1,17 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-// import { Link } from "react-scroll";
-const Projects = () => {
-  console.log("Projects component rendered");
+// import React from 'react';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+const ProjectShow = () => {
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
   const projects = [
     {
       name: "Workout",
@@ -63,52 +70,50 @@ const Projects = () => {
       livelink: "https://habibshq.netlify.app/",
     },
   ];
-
   return (
-    <div className="section" id="projects">
-      <div className="">
+    <div id="projects">
+      {" "}
+      <div className="project-slider">
         <h1 className="capitalize text-5xl mb-7 font-bold text-center">
           Projects{" "}
         </h1>
-
-        <div className="container ">
-          <Swiper autoPlay={true} infiniteLoop={true}>
-            {projects.map((project) => (
-              <SwiperSlide key={project.image}>
-                <div className="hero pb-5">
-                  <div className="hero-content flex-col lg:flex-row">
-                    <div className="w-full lg:w-[50%]">
-                      <img
-                        src={project.image}
-                        className="rounded-lg shadow-2xl  lg:w-full object-cover w-0.5 "
-                        alt={project.name}
-                      />
-                    </div>
-                    <div className="text-left w-full lg:w-[50%] mt-5 lg:mt-0 lg:pl-10">
-                      <h1 className="text-2xl lg:text-5xl font-bold">
-                        {project.name}
-                      </h1>
-                      <p className="py-6 text-base lg:text-lg">
-                        {project.description}
-                      </p>
-                      <a
-                        href={project.livelink}
-                        className="shadow-sm shadow-white px-5 py-2 bg-gradient-to-r from-[#FE54F5] via-[#CE3AEE] to-[#4C9BE4] capitalize rounded-full cursor-pointer"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Visit the site
-                      </a>
-                    </div>
+        <div className="container m-auto px-3">
+          {" "}
+          <Slider {...sliderSettings}>
+            {projects.map((project, index) => (
+              <div key={index} className="hero pb-5">
+                <div className="hero-content flex-col lg:flex-row">
+                  <div className="w-full lg:w-[50%]">
+                    <img
+                      src={project.image}
+                      className="rounded-lg shadow-2xl  lg:w-full object-cover  "
+                      alt={project.name}
+                    />
+                  </div>
+                  <div className="text-left w-full lg:w-[50%] mt-5 lg:mt-0 lg:pl-10">
+                    <h1 className="text-2xl lg:text-5xl font-bold">
+                      {project.name}
+                    </h1>
+                    <p className="py-6 text-base lg:text-lg">
+                      {project.description}
+                    </p>
+                    <a
+                      href={project.livelink}
+                      className="shadow-sm shadow-white px-5 py-2 bg-gradient-to-r from-[#FE54F5] via-[#CE3AEE] to-[#4C9BE4] capitalize rounded-full cursor-pointer"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit the site
+                    </a>
                   </div>
                 </div>
-              </SwiperSlide>
+              </div>
             ))}
-          </Swiper>
+          </Slider>
         </div>
       </div>
     </div>
   );
 };
 
-export default Projects;
+export default ProjectShow;

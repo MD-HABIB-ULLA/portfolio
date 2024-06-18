@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div id="about" className=" py-8 lg:py-24 min-h-screen  flex items-center justify-center">
       <div className="container m-auto flex flex-col items-center">
-        <h1 className="capitalize text-4xl font-bold">About me </h1>
+        <h1 className="capitalize text-5xl mb-4 font-bold">About me </h1>
         <p className=" text-center">
           Hello, I'm Habib Ulla, a passionate frontend web developer skilled in
           JavaScript, React, and Tailwind CSS. I specialize in creating visually

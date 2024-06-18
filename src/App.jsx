@@ -7,6 +7,7 @@ import Home from "./Pages/Home/Home";
 import Projects from "./Pages/Projects/Projects";
 import Skills from "./Pages/Skills/Skills";
 import Contacts from "./Pages/Contact/Contacts";
+import ProjectShow from "./Pages/Projects/ProjectShow";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
       <About />
       <Navber />
       <Skills />
-      <Projects />
+      <ProjectShow/>
       <Contacts />
       {/* <div className="h-[4000px]"></div> */}
     </div>
