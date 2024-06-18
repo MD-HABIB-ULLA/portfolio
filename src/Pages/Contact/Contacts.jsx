@@ -3,11 +3,11 @@
 const Contacts = () => {
   return (
     <div id="contact" className="min-h-screen">
-      <div className="p-8 rounded-lg ">
-        <h2 className="capitalize text-5xl mb-4 font-bold text-center mt-5">
+      <div className=" ">
+        <h2 className="capitalize md:text-5xl text-3xl mb-4 font-bold text-center mt-5">
           Contact Information
         </h2>
-        <div className="flex md:flex-row gap-4 flex-col  px-10 mt-10  justify-center container m-auto">
+        <div className="flex md:flex-row gap-4 flex-col  md:px-10 mt-10  justify-center container m-auto">
           <div className="md:w-1/2 w-full ">
             <h1 className="mb-2 text-3xl font-bold uppercase">
               md. habib ulla
@@ -43,7 +43,7 @@ const Contacts = () => {
               <div className="px-4 py-2 bg-white text-black  absolute rounded-full  top-9 left-1/2 transform -translate-x-1/2 ">
                 <h3 className="text-xl font-bold  ">Follow Me</h3>
               </div>
-              <div className=" text-center px-10 ">
+              <div className=" text-center md:px-10 ">
                 <ul className="flex space-x-4 mb-4 pt-9 py-5 mx-auto justify-evenly border-[1px] rounded-full">
                   <li>
                     <a
