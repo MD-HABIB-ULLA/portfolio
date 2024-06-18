@@ -1,6 +1,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import { FaDownload } from "react-icons/fa6";
 import { Fade } from "react-awesome-reveal";
+import { Link } from "react-scroll";
 
 const Banner = () => {
   const handleDownload = () => {
@@ -13,11 +14,16 @@ const Banner = () => {
     document.body.removeChild(link);
   };
   return (
-    <div  >
+    <div>
       <div className="flex items-center h-full">
         <div className="w-full justify-between flex   container m-auto ">
           <div className="flex justify-between flex-col lg:flex-row-reverse">
-            <Fade duration={2000} direction={"up"} triggerOnce={true} cascade={true}>
+            <Fade
+              duration={2000}
+              direction={"up"}
+              triggerOnce={true}
+              cascade={true}
+            >
               <div className="flex items-center justify-center">
                 {" "}
                 <div className="rounded-full border-2 border-[#5F8DE5]">
@@ -30,7 +36,12 @@ const Banner = () => {
               </div>
             </Fade>
             <div className="md:mt-0 mt-5">
-              <Fade duration={1000} direction={"up"} triggerOnce={true} cascade={true}>
+              <Fade
+                duration={1000}
+                direction={"up"}
+                triggerOnce={true}
+                cascade={true}
+              >
                 {" "}
                 <h1 className="lg:text-[120px] text-[70px] font-bold  uppercase">
                   Habib ulla
@@ -66,9 +77,15 @@ const Banner = () => {
                   I create intuitive, user-friendly web experiences
                 </p>
                 <div className="flex gap-4">
-                  <button className="shadow-sm shadow-white px-5 py-2 bg-gradient-to-r  from-[#FE54F5] via-[#CE3AEE] to-[#4C9BE4] capitalize     rounded-full ">
+                  <Link
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    className="shadow-sm shadow-white px-5 py-2 bg-gradient-to-r  from-[#FE54F5] via-[#CE3AEE] to-[#4C9BE4] capitalize cursor-pointer     rounded-full "
+                  >
                     contact me
-                  </button>
+                  </Link>
 
                   <button
                     onClick={handleDownload}
